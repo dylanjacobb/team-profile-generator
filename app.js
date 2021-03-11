@@ -16,6 +16,81 @@ const render = require("./lib/htmlRenderer");
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
 
+engineerInfo = () => {
+    inquire.prompt([
+        {
+            type: 'input',
+            name: 'engineerName',
+            message: "Please enter your engineer's name: ",
+        },
+        {   
+            type: 'input',
+            name: 'engineerID',
+            message: "Please enter your engineer's ID: ",
+        },
+        {
+            type: 'input',
+            name: 'engineerEmail',
+            message: "Please enter your engineer's email address: ",
+        },
+        {
+            type: 'input',
+            name: 'engineerUsername',
+            message: "Please enter your engineer's GitHub username: ",
+        },
+    ])
+}
+
+internInfo = () => {
+    inquirer.prompt([
+        {
+            type: 'input',
+            name: 'internName',
+            message: "Please enter your intern's name: ",
+        },
+        {
+            type: 'input',
+            name: 'internID',
+            message: "Please enter your intern's ID: ",
+        },
+        {
+            type: 'input',
+            name: 'internEmail',
+            message: "Please enter your intern's email address: ",
+        },
+        {
+            type: 'input',
+            name: 'internSchool',
+            message: "Please enter your intern's school: ",
+        },
+    ])
+}
+
+managerInfo = () => {
+    inquire.prompt([
+        {
+            type: 'input',
+            name: 'managerName',
+            message: "Please enter your manager's name: ",
+        },
+        {
+            type: 'input',
+            name: 'managersID',
+            message: "Please enter your managers ID: ",
+        },
+        {
+            type: 'input',
+            name: 'managersEmail',
+            message: "Please enter your managers email address: ",
+        },
+        {
+            type: 'input',
+            name: 'managersOfficeNumber',
+            message: "Please enter your manager's office number: ",
+        },
+    ])
+}
+
 // After the user has input all employees desired, call the `render` function (required
 // above) and pass in an array containing all employee objects; the `render` function will
 // generate and return a block of HTML including templated divs for each employee!
